@@ -2,29 +2,28 @@ package com.absensi.main.ui;
 
 import com.absensi.main.interfaces.MenuInterface;
 import com.absensi.main.interfaces.ModulInterfaces;
-import com.absensi.main.interfaces.UIInterface;
 
-public class Menu implements MenuInterface {
+public class MenuInputFromFile implements MenuInterface{
 
-	private String menuLabel = "Input Data Karyawan";
-	private ModulInterfaces modul;
+	ModulInterfaces modul;
 	
+	String ui = "Input Data from file";
 	@Override
 	public void showMenu(int index) {
 		// TODO Auto-generated method stub
-		System.out.println(index + ". " +menuLabel);
+		System.out.println(index + ". " +ui);
 	}
+
 	@Override
 	public void setModule(ModulInterfaces modul) {
 		// TODO Auto-generated method stub
-		this.modul=  modul;
+		this.modul = modul;
 	}
+
 	@Override
 	public ModulInterfaces getModul() {
 		// TODO Auto-generated method stub
 		return this.modul;
 	}
-
-	
 
 }
